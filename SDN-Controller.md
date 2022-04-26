@@ -1,0 +1,63 @@
+---
+title: SDN 技术指南（三）：OpenDaylight or Floodlight
+date: 2017-10-16 15:43:30
+tags: [DevOps,网络协议,SDN]
+categories: 工程技术
+---
+## 摘要
+- OpenDaylight or Floodlight
+
+<!--more-->
+
+## Floodlight
+
+#### Install & Run
+```go
+$ git clone git://github.com/floodlight/floodlight.git
+$ cd floodlight/
+$ ant
+$ java -jar target/floodlight.jar
+// 默认监听端口 6633
+```
+
+- 配置 Open vSwitch 连接Floodlight
+
+一个 OVS 可以同时配置一个或者多个控制器
+
+```go
+$ ovs-vsctl set-controller ovs-switch tcp:9.181.137.182:6633
+```
+
+## OPNFV
+
+#### [ebook | Understanding OPNFV ](https://www.opnfv.org/resources/download-understanding-opnfv-ebook)
+- [Network Functions Virtualization: All Roads Lead to OPNFV](https://www.linux.com/blog/opnfv/2017/9/network-functions-virtualization-all-roads-lead-opnfv)
+
+
+## 扩展阅读
+
+#### SDN技术专题
+- [SDN 技术指南（一）: 架构概览](https://riboseyim.com/2017/05/12/SDN/)
+- [SDN 技术指南（二）：OpenFlow](https://riboseyim.com/2017/08/22/SDN-OpenFlow/)
+- [SDN 技术指南（三）：SDN Controller](https://riboseyim.com/2017/10/16/SDN-Controller/)
+- [SDN 技术指南（四）：Open vSwitch](https://riboseyim.com/2017/10/13/SDN-OpenvSwitch/)
+- [SDN 技术指南（五）：NFV](https://riboseyim.com/2019/06/07/SDN-NFV)
+- [SDN 技术指南（六）：OpenStack or Kubernetes ? ](#)
+- [SDN 技术指南（七）：标准化组织](https://riboseyim.com/2019/06/07/SDN-ORG/)
+- [SDN 技术指南（八）：案例教学](https://riboseyim.com/2019/06/07/SDN-CASE)
+- [SDN技术指南（十）：在线课程推荐](https://riboseyim.com/2019/06/07/SDN-MOOC/)
+
+#### 网络编程专题
+- [浅谈基于数据分析的网络态势感知](https://riboseyim.github.io/2017/07/14/Network-sFlow/)
+- [网络数据包的捕获与分析（libpcap、BPF及gopacket）](https://riboseyim.github.io/2017/06/16/Network-Pcap/)
+- [新一代Ntopng网络流量监控—可视化和架构分析](https://riboseyim.github.io/2016/04/26/Network-Ntopng/)
+
+#### 网络安全专题
+- [Cyber-Security: IPv6 & Security](https://riboseyim.github.io/2017/08/09/Protocol-IPv6/)
+- [Cyber-Security|香港拟增设网络安全与科技罪案总警司](https://riboseyim.github.io/2017/04/09/CyberSecurity-CSTCB/)
+
+#### 云计算专题
+- [AWS or Azure : 云计算平台的趋势分析|Stack Overflow,2017](https://riboseyim.com/2017/07/23/CloudComputing/)
+
+
+## 参考文献
